@@ -23,7 +23,7 @@ class Calculator
       int select=sc.nextInt();
       switch(select)
       {
-          case 1: int ResultOfAdd=PerformAdd(number1,number2);int k1=number1+number2;
+          case 1: int ResultOfAdd=PerformAdd(number1,number2);
                    System.out.println("Sum of given numbers "+number1+" and "+number2+" is "+ResultOfAdd);
                    break;
           case 2: 
@@ -41,7 +41,7 @@ class Calculator
                    System.out.println("Product of given numbers "+number1+" and "+number2+" is "+ResultOfMul); 
                    break; 
           case 4: 
-                if(number2!=0)
+                if((number2)!=0)
                 {
                    int ResultOfDiv=PerformDiv(number1,number2);
                    System.out.println("Division of given numbers "+number1+" and "+number2+" is "+ResultOfDiv); 
@@ -67,7 +67,7 @@ class Calculator
     {
     return num1*num2;
     }
-    int PerformDiv(int num1.int num2)
+    int PerformDiv(int num1,int num2)
     {
     return num1/num2;
     }
