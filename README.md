@@ -4,15 +4,17 @@ import java.lang.*;
 import java.io.*;
 class Calculator
 {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
       Scanner sc=new Scanner(System.in);
       System.out.println("Enter numbers to perform operation on them");
-      int num1=sc.nextInt();
-      int num2=sc.nextInt();
+      int n1=sc.nextInt();
+      int n2=sc.nextInt();
       Calculator c=new Calculator();
-c.getResult(num1,num2);
-}
-void getResult(int number1,number2){
+      c.getResult(n1,n2);  
+     }
+    void getResult(int number1,number2)
+    {
       System.out.println("Choose operation to be formed ");
       System.out.println("1.Addition");
       System.out.println("2.Multiplication");
@@ -21,27 +23,28 @@ void getResult(int number1,number2){
       int select=sc.nextInt();
       switch(select)
       {
-          case 1: int k1=number1+number2;
-                   System.out.println("Sum of given numbers "+number1+" and "+number2+" is "+k1);
+          case 1: int ResultOfAdd=PerformAdd(number1,number2);int k1=number1+number2;
+                   System.out.println("Sum of given numbers "+number1+" and "+number2+" is "+ResultOfAdd);
                    break;
-          case 2: int k2=number1-number2;
-                   if(k2>0)
+          case 2: 
+                   if(number1>number2)
                    {
-                   System.out.println("Difference of given numbers "+number1+" and "+number2+" is "+k2);
+                   int ResultOfSub=PerformSub(number1,number2);
+                   System.out.println("Difference of given numbers "+number1+" and "+number2+" is "+ResultOfSub);
                    }
                    else
                    {
                    System.out.println(" Subtraction cannot be performed ");
                    }
                    break;
-          case 3: int k3=number1*number2;
-                   System.out.println("Product of given numbers "+number1+" and "+number2+" is "+k3); 
+          case 3: int ResultOfMul=PerformMul(number1,number2);
+                   System.out.println("Product of given numbers "+number1+" and "+number2+" is "+ResultOfMul); 
                    break; 
           case 4: 
                 if(number2!=0)
                 {
-                   int k4=number1/number2;
-                   System.out.println("Division of given numbers "+number1+" and "+number2+" is "+k4); 
+                   int ResultOfDiv=PerformDiv(number1,number2);
+                   System.out.println("Division of given numbers "+number1+" and "+number2+" is "+ResultOfDiv); 
                 }
                 else
                 {
@@ -51,5 +54,21 @@ void getResult(int number1,number2){
           default:  System.out.println("No operation to perform");
                      break;                           
       }
+    }
+    int PerformAdd(int num1,int num2)
+    {
+    return num1+num2;
+    }
+    int PerformSub(int num1,int num2)
+    {
+    return num1-num2;
+    }
+    int PerformMul(int num1,int num2)
+    {
+    return num1*num2;
+    }
+    int PerformDiv(int num1.int num2)
+    {
+    return num1/num2;
     }
 }
