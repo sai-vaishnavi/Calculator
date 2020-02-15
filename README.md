@@ -37,7 +37,7 @@ class Calculator
                    System.out.println(" Subtraction cannot be performed ");
                    }
                    break;
-          case 3: int ResultOfMul=PerformMul(number1,number2);
+          case 3: int ResultOfMul=PMul(number1,number2);
                    System.out.println("Product of given numbers "+number1+" and "+number2+" is "+ResultOfMul); 
                    break; 
           case 4: 
