@@ -23,13 +23,13 @@ class Calculator
       int select=sc.nextInt();
       switch(select)
       {
-          case 1: int ResultOfAdd=PerformAdd(number1,number2);
+          case 1: int ResultOfAdd=Addition(number1,number2);
                    System.out.println("Sum of given numbers "+number1+" and "+number2+" is "+ResultOfAdd);
                    break;
           case 2: 
                    if(number1>number2)
                    {
-                   int ResultOfSub=PerformSub(number1,number2);
+                   int ResultOfSub=Subtraction(number1,number2);
                    System.out.println("Difference of given numbers "+number1+" and "+number2+" is "+ResultOfSub);
                    }
                    else
@@ -37,13 +37,13 @@ class Calculator
                    System.out.println(" Subtraction cannot be performed ");
                    }
                    break;
-          case 3: int ResultOfMul=PMul(number1,number2);
+          case 3: int ResultOfMul=Multiplication(number1,number2);
                    System.out.println("Product of given numbers "+number1+" and "+number2+" is "+ResultOfMul); 
                    break; 
           case 4: 
                 if((number2)!=0)
                 {
-                   int ResultOfDiv=PerformDiv(number1,number2);
+                   int ResultOfDiv=Division(number1,number2);
                    System.out.println("Division of given numbers "+number1+" and "+number2+" is "+ResultOfDiv); 
                 }
                 else
@@ -55,19 +55,19 @@ class Calculator
                      break;                           
       }
     }
-    int PerformAdd(int num1,int num2)
+    int Addition(int num1,int num2)
     {
     return num1+num2;
     }
-    int PerformSub(int num1,int num2)
+    int Subtraction(int num1,int num2)
     {
     return num1-num2;
     }
-    int PerformMul(int num1,int num2)
+    int Multiplication(int num1,int num2)
     {
     return num1*num2;
     }
-    int PerformDiv(int num1,int num2)
+    int Division(int num1,int num2)
     {
     return num1/num2;
     }
